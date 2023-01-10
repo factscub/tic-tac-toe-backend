@@ -43,6 +43,10 @@ const loginRoute = async (req, res,next) => {
             res.json({ email: user.email, username: user.username });
             return;
         }
+          else{
+            throw new Error()
+
+        }
     } catch (error) {
         res.status(404).send({ error: 'Enter correct details' });
 
