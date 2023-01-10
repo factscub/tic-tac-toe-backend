@@ -3,6 +3,7 @@ const URL = 'mongodb+srv://siva7780:Siva1234@tictactoe.727wyfs.mongodb.net/ticta
 
 async function database() {
 
+    mongoose.set('strictQuery', true);
     try {
          mongoose.connect(URL,{
             useUnifiedTopology: true,
